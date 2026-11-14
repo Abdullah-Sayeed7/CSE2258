@@ -14,6 +14,4 @@ A simple quiz website built for our Web Technology course. It lets students test
 - **Question Validation**: Highlights unanswered questions in red and blocks empty submissions.
 - **Instant Results**: Calculates final score, displays percentage feedback, and generates a personalized scorecard.
 - **Accidental Exit Warning**: Prompts a confirmation if you try to leave or refresh mid-quiz.
-- **Built with Pure Vanilla JS**: Strictly built using standard HTML5, CSS3, and JavaScript (Module 3 DOM, BOM, events, and regex) with no external frameworks or CDN dependencies.
-
-## File Structure
+-
