@@ -1,0 +1,120 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CodeQuiz - HTML Easy</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <h1 class="logo">CodeQuiz</h1>
+  </header>
+
+  <section class="content quiz-box">
+    <h2>HTML - Easy Quiz</h2>
+    <p>10 questions | Time limit: 20 minutes | <span id="timer">20:00</span></p>
+    <p class="notice">You cannot leave this page until you submit the quiz.</p>
+
+        <form onsubmit="return submitQuiz()">
+      <div class="card student-card">
+        <h3>Student Information</h3>
+        <p class="instruction-text">Please enter your details before submitting the quiz.</p>
+        <div class="form-row">
+          <label for="studentName">Full Name:</label>
+          <input type="text" id="studentName" name="studentName" placeholder="e.g. Rahul Sharma">
+        </div>
+        <div class="form-row">
+          <label for="studentEmail">College Email:</label>
+          <input type="text" id="studentEmail" name="studentEmail" placeholder="e.g. rahul_cse@college.edu">
+        </div>
+        <div class="form-row">
+          <label for="studentRoll">Roll Number:</label>
+          <input type="text" id="studentRoll" name="studentRoll" placeholder="e.g. 20251CSE0332">
+        </div>
+      </div>
+      <div class="card question">
+        <h3>Q1. What does HTML stand for?</h3>
+        <label class="option"><input type="radio" name="q1" value="A"> A) High Text Machine Language</label>
+        <label class="option"><input type="radio" name="q1" value="B"> B) HyperText Markup Language</label>
+        <label class="option"><input type="radio" name="q1" value="C"> C) HyperTool Markup Language</label>
+        <label class="option"><input type="radio" name="q1" value="D"> D) Home Text Markup Language</label>
+      </div>
+      <div class="card question">
+        <h3>Q2. Which tag creates the largest heading?</h3>
+        <label class="option"><input type="radio" name="q2" value="A"> A) &lt;h6&gt;</label>
+        <label class="option"><input type="radio" name="q2" value="B"> B) &lt;head&gt;</label>
+        <label class="option"><input type="radio" name="q2" value="C"> C) &lt;h1&gt;</label>
+        <label class="option"><input type="radio" name="q2" value="D"> D) &lt;heading&gt;</label>
+      </div>
+      <div class="card question">
+        <h3>Q3. Which tag creates a link?</h3>
+        <label class="option"><input type="radio" name="q3" value="A"> A) &lt;link&gt;</label>
+        <label class="option"><input type="radio" name="q3" value="B"> B) &lt;href&gt;</label>
+        <label class="option"><input type="radio" name="q3" value="C"> C) &lt;url&gt;</label>
+        <label class="option"><input type="radio" name="q3" value="D"> D) &lt;a&gt;</label>
+      </div>
+      <div class="card question">
+        <h3>Q4. Which tag creates a line break?</h3>
+        <label class="option"><input type="radio" name="q4" value="A"> A) &lt;br&gt;</label>
+        <label class="option"><input type="radio" name="q4" value="B"> B) &lt;break&gt;</label>
+        <label class="option"><input type="radio" name="q4" value="C"> C) &lt;lb&gt;</label>
+        <label class="option"><input type="radio" name="q4" value="D"> D) &lt;line&gt;</label>
+      </div>
+      <div class="card question">
+        <h3>Q5. Which tag inserts an image?</h3>
+        <label class="option"><input type="radio" name="q5" value="A"> A) &lt;image&gt;</label>
+        <label class="option"><input type="radio" name="q5" value="B"> B) &lt;img&gt;</label>
+        <label class="option"><input type="radio" name="q5" value="C"> C) &lt;picture&gt;</label>
+        <label class="option"><input type="radio" name="q5" value="D"> D) &lt;src&gt;</label>
+      </div>
+      <div class="card question">
+        <h3>Q6. Which tag creates an unordered (bullet) list?</h3>
+        <label class="option"><input type="radio" name="q6" value="A"> A) &lt;ol&gt;</label>
+        <label class="option"><input type="radio" name="q6" value="B"> B) &lt;li&gt;</label>
+        <label class="option"><input type="radio" name="q6" value="C"> C) &lt;ul&gt;</label>
+        <label class="option"><input type="radio" name="q6" value="D"> D) &lt;list&gt;</label>
+      </div>
+      <div class="card question">
+        <h3>Q7. Which attribute gives the address of a link?</h3>
+        <label class="option"><input type="radio" name="q7" value="A"> A) src</label>
+        <label class="option"><input type="radio" name="q7" value="B"> B) link</label>
+        <label class="option"><input type="radio" name="q7" value="C"> C) url</label>
+        <label class="option"><input type="radio" name="q7" value="D"> D) href</label>
+      </div>
+      <div class="card question">
+        <h3>Q8. Which tag holds all the visible content of a page?</h3>
+        <label class="option"><input type="radio" name="q8" value="A"> A) &lt;body&gt;</label>
+        <label class="option"><input type="radio" name="q8" value="B"> B) &lt;head&gt;</label>
+        <label class="option"><input type="radio" name="q8" value="C"> C) &lt;title&gt;</label>
+        <label class="option"><input type="radio" name="q8" value="D"> D) &lt;html&gt;</label>
+      </div>
+      <div class="card question">
+        <h3>Q9. Which tag creates a paragraph?</h3>
+        <label class="option"><input type="radio" name="q9" value="A"> A) &lt;para&gt;</label>
+        <label class="option"><input type="radio" name="q9" value="B"> B) &lt;p&gt;</label>
+        <label class="option"><input type="radio" name="q9" value="C"> C) &lt;pg&gt;</label>
+        <label class="option"><input type="radio" name="q9" value="D"> D) &lt;text&gt;</label>
+      </div>
+      <div class="card question">
+        <h3>Q10. Which tag creates a table row?</h3>
+        <label class="option"><input type="radio" name="q10" value="A"> A) &lt;td&gt;</label>
+        <label class="option"><input type="radio" name="q10" value="B"> B) &lt;th&gt;</label>
+        <label class="option"><input type="radio" name="q10" value="C"> C) &lt;tr&gt;</label>
+        <label class="option"><input type="radio" name="q10" value="D"> D) &lt;row&gt;</label>
+      </div>
+
+      <div class="center">
+        <input type="submit" value="Submit Quiz" class="btn">
+      </div>
+    </form>
+  </section>
+
+  <footer>
+    <p>CodeQuiz - College Web Technology Project</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

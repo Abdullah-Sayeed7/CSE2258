@@ -1,0 +1,401 @@
+/* CodeQuiz - Theme A (Deep Slate & Sky Indigo) */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Arial, sans-serif;
+  background-color: #0f172a; /* Deep calm slate navy */
+  color: #f8fafc;            /* Crisp off-white */
+  line-height: 1.6;
+}
+
+h2 {
+  font-size: 28px;
+  font-weight: 700;
+  color: #f8fafc;
+  margin-bottom: 15px;
+}
+
+h3 {
+  font-size: 19px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: #38bdf8;            /* Sky cyan */
+}
+
+p {
+  margin-bottom: 12px;
+  color: #cbd5e1;            /* Soft slate */
+}
+
+ul {
+  margin: 0 0 20px 25px;
+  color: #cbd5e1;
+}
+
+ul li {
+  margin-bottom: 8px;
+}
+
+a {
+  color: #38bdf8;
+  text-decoration: none;
+  transition: color 0.15s ease;
+}
+
+a:hover {
+  color: #818cf8;
+}
+
+/* Header and menu */
+header {
+  background-color: #1e293b;
+  border-bottom: 1px solid #334155;
+  text-align: center;
+  padding: 20px 15px;
+}
+
+.logo {
+  color: #38bdf8;
+  font-family: "Courier New", monospace;
+  font-size: 32px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.menu {
+  margin-top: 8px;
+}
+
+.menu a {
+  display: inline-block;
+  color: #cbd5e1;
+  font-weight: 500;
+  margin: 6px 14px;
+  font-size: 15px;
+}
+
+.menu a:hover {
+  color: #38bdf8;
+}
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  background-color: #6366f1; /* Calm Indigo */
+  color: #ffffff;
+  padding: 10px 22px;
+  margin: 10px 6px 0 0;
+  border: none;
+  border-radius: 6px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 8px rgba(99, 102, 241, 0.3);
+}
+
+.btn:hover {
+  background-color: #4f46e5;
+  transform: translateY(-1px);
+}
+
+.easy-btn {
+  background-color: #10b981; /* Emerald Green */
+  box-shadow: 0 2px 8px rgba(16, 185, 129, 0.3);
+}
+
+.easy-btn:hover {
+  background-color: #059669;
+}
+
+.hard-btn {
+  background-color: #f43f5e; /* Rose */
+  box-shadow: 0 2px 8px rgba(244, 63, 94, 0.3);
+}
+
+.hard-btn:hover {
+  background-color: #e11d48;
+}
+
+/* Hero Section */
+.hero {
+  background: linear-gradient(135deg, #1e1b4b 0%, #0f172a 100%);
+  border-bottom: 1px solid #334155;
+  text-align: center;
+  padding: 70px 20px;
+}
+
+.hero h2 {
+  font-size: 36px;
+  color: #f8fafc;
+}
+
+.hero p {
+  font-size: 17px;
+  color: #94a3b8;
+  max-width: 600px;
+  margin: 0 auto 20px auto;
+}
+
+.hero .btn {
+  background-color: #38bdf8;
+  color: #0f172a;
+  box-shadow: 0 4px 14px rgba(56, 189, 248, 0.35);
+}
+
+.hero .btn:hover {
+  background-color: #ffffff;
+}
+
+/* Content Container */
+.content {
+  max-width: 1000px;
+  margin: auto;
+  padding: 35px 20px;
+}
+
+.center {
+  text-align: center;
+}
+
+/* Cards */
+.card-row {
+  margin-top: 15px;
+}
+
+.card {
+  display: inline-block;
+  vertical-align: top;
+  background-color: #1e293b;
+  border: 1px solid #334155;
+  border-radius: 10px;
+  padding: 22px;
+  margin: 10px 1%;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+  transition: border-color 0.2s ease, transform 0.2s ease;
+}
+
+.big-card {
+  width: 30%;
+}
+
+.big-card:hover {
+  border-color: #6366f1;
+  transform: translateY(-2px);
+}
+
+.card h3 {
+  color: #38bdf8;
+}
+
+.time {
+  color: #94a3b8;
+  font-size: 14px;
+  margin-top: 12px;
+  margin-bottom: 4px;
+}
+
+/* Quiz Page Container */
+.quiz-box {
+  max-width: 720px;
+}
+
+.notice {
+  color: #fbbf24; /* Warm Amber */
+  font-size: 14px;
+  font-weight: 500;
+}
+
+/* Student Information Card */
+.student-card {
+  display: block;
+  width: 100%;
+  margin: 15px 0 25px 0;
+  border-left: 4px solid #6366f1;
+}
+
+.student-card h3 {
+  color: #f8fafc;
+  margin-bottom: 6px;
+}
+
+.student-card .instruction-text {
+  font-size: 14px;
+  color: #94a3b8;
+  margin-bottom: 18px;
+}
+
+.form-row {
+  margin-bottom: 14px;
+}
+
+.form-row label {
+  display: block;
+  font-size: 14px;
+  font-weight: 600;
+  color: #cbd5e1;
+  margin-bottom: 6px;
+}
+
+.form-row input[type="text"] {
+  width: 100%;
+  padding: 10px 14px;
+  background-color: #0f172a;
+  border: 1px solid #475569;
+  border-radius: 6px;
+  color: #f8fafc;
+  font-size: 15px;
+  font-family: inherit;
+  outline: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.form-row input[type="text"]:focus {
+  border-color: #6366f1;
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.25);
+}
+
+.form-row input[type="text"]::placeholder {
+  color: #64748b;
+}
+
+/* Question Cards */
+.question {
+  display: block;
+  margin: 18px 0;
+}
+
+.question h3 {
+  color: #f8fafc;
+  font-size: 17px;
+  line-height: 1.5;
+  margin-bottom: 12px;
+}
+
+pre {
+  background-color: #0b1120;
+  border: 1px solid #334155;
+  color: #38bdf8;
+  padding: 14px;
+  border-radius: 6px;
+  margin-bottom: 14px;
+  font-family: "Courier New", monospace;
+  font-size: 14px;
+  overflow: auto;
+}
+
+/* Radio Options */
+.option {
+  display: block;
+  background-color: #162032;
+  border: 1px solid #334155;
+  border-radius: 6px;
+  padding: 11px 14px;
+  margin-bottom: 8px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  color: #e2e8f0;
+}
+
+.option:hover {
+  border-color: #6366f1;
+  background-color: #1e293b;
+}
+
+.option input[type="radio"] {
+  margin-right: 8px;
+  accent-color: #6366f1;
+}
+
+/* Timer Badge */
+#timer {
+  display: inline-block;
+  font-size: 18px;
+  font-weight: 700;
+  font-family: "Courier New", monospace;
+  color: #38bdf8;
+  background-color: #0b1120;
+  border: 1px solid #475569;
+  padding: 4px 12px;
+  border-radius: 6px;
+  margin-left: 8px;
+  vertical-align: middle;
+}
+
+/* Selected Option Highlight */
+.selected-option {
+  border-color: #6366f1 !important;
+  background-color: rgba(99, 102, 241, 0.15) !important;
+}
+
+/* Unanswered Question Highlight */
+.unanswered {
+  border-color: #f43f5e !important;
+  box-shadow: 0 0 12px rgba(244, 63, 94, 0.4) !important;
+}
+
+/* Candidate Badge on Results Page */
+.candidate-badge {
+  background-color: #0f172a;
+  border: 1px solid #334155;
+  border-radius: 8px;
+  padding: 14px 18px;
+  margin-bottom: 18px;
+  text-align: left;
+}
+
+.candidate-badge p {
+  margin-bottom: 5px;
+  color: #cbd5e1;
+  font-size: 15px;
+}
+
+.candidate-badge strong {
+  color: #38bdf8;
+}
+
+/* Results Page */
+.score {
+  font-size: 56px;
+  font-weight: 800;
+  color: #38bdf8;
+  margin: 10px 0;
+  letter-spacing: -1px;
+}
+
+/* Footer */
+footer {
+  background-color: #1e293b;
+  border-top: 1px solid #334155;
+  text-align: center;
+  padding: 25px 20px;
+  margin-top: 40px;
+}
+
+footer p {
+  color: #94a3b8;
+  font-size: 14px;
+  margin: 0;
+}
+
+/* Responsive */
+@media (max-width: 800px) {
+  .big-card {
+    width: 46%;
+  }
+}
+
+@media (max-width: 500px) {
+  .big-card {
+    width: 96%;
+  }
+
+  .hero h2 {
+    font-size: 26px;
+  }
+}

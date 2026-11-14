@@ -1,0 +1,155 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CodeQuiz - CSS Hard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <h1 class="logo">CodeQuiz</h1>
+  </header>
+
+  <section class="content quiz-box">
+    <h2>CSS - Hard Quiz</h2>
+    <p>15 questions | Time limit: 30 minutes | <span id="timer">30:00</span></p>
+    <p class="notice">You cannot leave this page until you submit the quiz.</p>
+
+        <form onsubmit="return submitQuiz()">
+      <div class="card student-card">
+        <h3>Student Information</h3>
+        <p class="instruction-text">Please enter your details before submitting the quiz.</p>
+        <div class="form-row">
+          <label for="studentName">Full Name:</label>
+          <input type="text" id="studentName" name="studentName" placeholder="e.g. Rahul Sharma">
+        </div>
+        <div class="form-row">
+          <label for="studentEmail">College Email:</label>
+          <input type="text" id="studentEmail" name="studentEmail" placeholder="e.g. rahul_cse@college.edu">
+        </div>
+        <div class="form-row">
+          <label for="studentRoll">Roll Number:</label>
+          <input type="text" id="studentRoll" name="studentRoll" placeholder="e.g. 20251CSE0332">
+        </div>
+      </div>
+      <div class="card question">
+        <h3>Q1. Which selector has the highest specificity?</h3>
+        <label class="option"><input type="radio" name="q1" value="A"> A) p</label>
+        <label class="option"><input type="radio" name="q1" value="B"> B) #id</label>
+        <label class="option"><input type="radio" name="q1" value="C"> C) .class</label>
+        <label class="option"><input type="radio" name="q1" value="D"> D) *</label>
+      </div>
+      <div class="card question">
+        <h3>Q2. What does box-sizing: border-box do?</h3>
+        <label class="option"><input type="radio" name="q2" value="A"> A) Removes the border</label>
+        <label class="option"><input type="radio" name="q2" value="B"> B) Adds a box shadow</label>
+        <label class="option"><input type="radio" name="q2" value="C"> C) Width includes padding and border</label>
+        <label class="option"><input type="radio" name="q2" value="D"> D) Makes the box square</label>
+      </div>
+      <div class="card question">
+        <h3>Q3. What is the default value of the position property?</h3>
+        <label class="option"><input type="radio" name="q3" value="A"> A) relative</label>
+        <label class="option"><input type="radio" name="q3" value="B"> B) absolute</label>
+        <label class="option"><input type="radio" name="q3" value="C"> C) fixed</label>
+        <label class="option"><input type="radio" name="q3" value="D"> D) static</label>
+      </div>
+      <div class="card question">
+        <h3>Q4. Which display value lets elements sit side by side and still have a width?</h3>
+        <label class="option"><input type="radio" name="q4" value="A"> A) inline-block</label>
+        <label class="option"><input type="radio" name="q4" value="B"> B) block</label>
+        <label class="option"><input type="radio" name="q4" value="C"> C) inline</label>
+        <label class="option"><input type="radio" name="q4" value="D"> D) none</label>
+      </div>
+      <div class="card question">
+        <h3>Q5. What does margin: 10px 20px; mean?</h3>
+        <label class="option"><input type="radio" name="q5" value="A"> A) 10px left and right, 20px top and bottom</label>
+        <label class="option"><input type="radio" name="q5" value="B"> B) 10px top and bottom, 20px left and right</label>
+        <label class="option"><input type="radio" name="q5" value="C"> C) 10px top, 20px bottom</label>
+        <label class="option"><input type="radio" name="q5" value="D"> D) 10px all sides</label>
+      </div>
+      <div class="card question">
+        <h3>Q6. What does the selector p.note select?</h3>
+        <label class="option"><input type="radio" name="q6" value="A"> A) Elements with id note</label>
+        <label class="option"><input type="radio" name="q6" value="B"> B) All p and note elements</label>
+        <label class="option"><input type="radio" name="q6" value="C"> C) p elements with class note</label>
+        <label class="option"><input type="radio" name="q6" value="D"> D) note elements inside p</label>
+      </div>
+      <div class="card question">
+        <h3>Q7. What does the selector div p select?</h3>
+        <label class="option"><input type="radio" name="q7" value="A"> A) Only p elements directly inside a div</label>
+        <label class="option"><input type="radio" name="q7" value="B"> B) All div and p elements</label>
+        <label class="option"><input type="radio" name="q7" value="C"> C) The first p only</label>
+        <label class="option"><input type="radio" name="q7" value="D"> D) All p elements inside a div</label>
+      </div>
+      <div class="card question">
+        <h3>Q8. What does the selector div &gt; p select?</h3>
+        <label class="option"><input type="radio" name="q8" value="A"> A) p elements that are direct children of a div</label>
+        <label class="option"><input type="radio" name="q8" value="B"> B) All p elements inside a div</label>
+        <label class="option"><input type="radio" name="q8" value="C"> C) The div after a p</label>
+        <label class="option"><input type="radio" name="q8" value="D"> D) All div and p elements</label>
+      </div>
+      <div class="card question">
+        <h3>Q9. Which property controls the stacking order of elements?</h3>
+        <label class="option"><input type="radio" name="q9" value="A"> A) order</label>
+        <label class="option"><input type="radio" name="q9" value="B"> B) z-index</label>
+        <label class="option"><input type="radio" name="q9" value="C"> C) stack</label>
+        <label class="option"><input type="radio" name="q9" value="D"> D) layer</label>
+      </div>
+      <div class="card question">
+        <h3>Q10. Which pseudo-class styles an element when the mouse is over it?</h3>
+        <label class="option"><input type="radio" name="q10" value="A"> A) :active</label>
+        <label class="option"><input type="radio" name="q10" value="B"> B) :focus</label>
+        <label class="option"><input type="radio" name="q10" value="C"> C) :hover</label>
+        <label class="option"><input type="radio" name="q10" value="D"> D) :over</label>
+      </div>
+      <div class="card question">
+        <h3>Q11. Which unit is relative to the font size?</h3>
+        <label class="option"><input type="radio" name="q11" value="A"> A) px</label>
+        <label class="option"><input type="radio" name="q11" value="B"> B) cm</label>
+        <label class="option"><input type="radio" name="q11" value="C"> C) pt</label>
+        <label class="option"><input type="radio" name="q11" value="D"> D) em</label>
+      </div>
+      <div class="card question">
+        <h3>Q12. Which declaration removes an element and its space from the page?</h3>
+        <label class="option"><input type="radio" name="q12" value="A"> A) display: none;</label>
+        <label class="option"><input type="radio" name="q12" value="B"> B) visibility: hidden;</label>
+        <label class="option"><input type="radio" name="q12" value="C"> C) opacity: 0;</label>
+        <label class="option"><input type="radio" name="q12" value="D"> D) position: hidden;</label>
+      </div>
+      <div class="card question">
+        <h3>Q13. A position: absolute element is placed relative to...</h3>
+        <label class="option"><input type="radio" name="q13" value="A"> A) the previous element</label>
+        <label class="option"><input type="radio" name="q13" value="B"> B) the nearest positioned ancestor</label>
+        <label class="option"><input type="radio" name="q13" value="C"> C) its own old position</label>
+        <label class="option"><input type="radio" name="q13" value="D"> D) the footer</label>
+      </div>
+      <div class="card question">
+        <h3>Q14. Which property creates rounded corners?</h3>
+        <label class="option"><input type="radio" name="q14" value="A"> A) corner-radius</label>
+        <label class="option"><input type="radio" name="q14" value="B"> B) round</label>
+        <label class="option"><input type="radio" name="q14" value="C"> C) border-radius</label>
+        <label class="option"><input type="radio" name="q14" value="D"> D) border-round</label>
+      </div>
+      <div class="card question">
+        <h3>Q15. What is the order of values in padding: 5px 10px 15px 20px?</h3>
+        <label class="option"><input type="radio" name="q15" value="A"> A) top, bottom, left, right</label>
+        <label class="option"><input type="radio" name="q15" value="B"> B) left, top, right, bottom</label>
+        <label class="option"><input type="radio" name="q15" value="C"> C) bottom, left, top, right</label>
+        <label class="option"><input type="radio" name="q15" value="D"> D) top, right, bottom, left</label>
+      </div>
+
+      <div class="center">
+        <input type="submit" value="Submit Quiz" class="btn">
+      </div>
+    </form>
+  </section>
+
+  <footer>
+    <p>CodeQuiz - College Web Technology Project</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

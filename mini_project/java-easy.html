@@ -1,0 +1,122 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CodeQuiz - Java Easy</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <h1 class="logo">CodeQuiz</h1>
+  </header>
+
+  <section class="content quiz-box">
+    <h2>Java - Easy Quiz</h2>
+    <p>10 questions | Time limit: 20 minutes | <span id="timer">20:00</span></p>
+    <p class="notice">You cannot leave this page until you submit the quiz.</p>
+
+        <form onsubmit="return submitQuiz()">
+      <div class="card student-card">
+        <h3>Student Information</h3>
+        <p class="instruction-text">Please enter your details before submitting the quiz.</p>
+        <div class="form-row">
+          <label for="studentName">Full Name:</label>
+          <input type="text" id="studentName" name="studentName" placeholder="e.g. Rahul Sharma">
+        </div>
+        <div class="form-row">
+          <label for="studentEmail">College Email:</label>
+          <input type="text" id="studentEmail" name="studentEmail" placeholder="e.g. rahul_cse@college.edu">
+        </div>
+        <div class="form-row">
+          <label for="studentRoll">Roll Number:</label>
+          <input type="text" id="studentRoll" name="studentRoll" placeholder="e.g. 20251CSE0332">
+        </div>
+      </div>
+      <div class="card question">
+        <h3>Q1. Which method is the starting point of a Java program?</h3>
+        <label class="option"><input type="radio" name="q1" value="A"> A) start()</label>
+        <label class="option"><input type="radio" name="q1" value="B"> B) public static void main(String[] args)</label>
+        <label class="option"><input type="radio" name="q1" value="C"> C) run()</label>
+        <label class="option"><input type="radio" name="q1" value="D"> D) public void main()</label>
+      </div>
+      <div class="card question">
+        <h3>Q2. Which statement prints a line of text in Java?</h3>
+        <label class="option"><input type="radio" name="q2" value="A"> A) print()</label>
+        <label class="option"><input type="radio" name="q2" value="B"> B) cout &lt;&lt;</label>
+        <label class="option"><input type="radio" name="q2" value="C"> C) System.out.println()</label>
+        <label class="option"><input type="radio" name="q2" value="D"> D) console.log()</label>
+      </div>
+      <div class="card question">
+        <h3>Q3. Which keyword is used to create an object?</h3>
+        <label class="option"><input type="radio" name="q3" value="A"> A) create</label>
+        <label class="option"><input type="radio" name="q3" value="B"> B) make</label>
+        <label class="option"><input type="radio" name="q3" value="C"> C) object</label>
+        <label class="option"><input type="radio" name="q3" value="D"> D) new</label>
+      </div>
+      <div class="card question">
+        <h3>Q4. Which data type stores whole numbers?</h3>
+        <label class="option"><input type="radio" name="q4" value="A"> A) int</label>
+        <label class="option"><input type="radio" name="q4" value="B"> B) float</label>
+        <label class="option"><input type="radio" name="q4" value="C"> C) String</label>
+        <label class="option"><input type="radio" name="q4" value="D"> D) boolean</label>
+      </div>
+      <div class="card question">
+        <h3>Q5. Which symbol starts a single-line comment?</h3>
+        <label class="option"><input type="radio" name="q5" value="A"> A) #</label>
+        <label class="option"><input type="radio" name="q5" value="B"> B) //</label>
+        <label class="option"><input type="radio" name="q5" value="C"> C) --</label>
+        <label class="option"><input type="radio" name="q5" value="D"> D) /*</label>
+      </div>
+      <div class="card question">
+        <h3>Q6. What is the file extension of a Java source file?</h3>
+        <label class="option"><input type="radio" name="q6" value="A"> A) .class</label>
+        <label class="option"><input type="radio" name="q6" value="B"> B) .js</label>
+        <label class="option"><input type="radio" name="q6" value="C"> C) .java</label>
+        <label class="option"><input type="radio" name="q6" value="D"> D) .jar</label>
+      </div>
+      <div class="card question">
+        <h3>Q7. What is the output?</h3>
+        <pre>System.out.println(5 + 3);</pre>
+        <label class="option"><input type="radio" name="q7" value="A"> A) 53</label>
+        <label class="option"><input type="radio" name="q7" value="B"> B) 5+3</label>
+        <label class="option"><input type="radio" name="q7" value="C"> C) Error</label>
+        <label class="option"><input type="radio" name="q7" value="D"> D) 8</label>
+      </div>
+      <div class="card question">
+        <h3>Q8. Which data type stores text?</h3>
+        <label class="option"><input type="radio" name="q8" value="A"> A) String</label>
+        <label class="option"><input type="radio" name="q8" value="B"> B) char only</label>
+        <label class="option"><input type="radio" name="q8" value="C"> C) text</label>
+        <label class="option"><input type="radio" name="q8" value="D"> D) int</label>
+      </div>
+      <div class="card question">
+        <h3>Q9. Which keyword defines a class?</h3>
+        <label class="option"><input type="radio" name="q9" value="A"> A) define</label>
+        <label class="option"><input type="radio" name="q9" value="B"> B) class</label>
+        <label class="option"><input type="radio" name="q9" value="C"> C) struct</label>
+        <label class="option"><input type="radio" name="q9" value="D"> D) object</label>
+      </div>
+      <div class="card question">
+        <h3>Q10. How many times does this loop run?</h3>
+        <pre>for (int i = 0; i &lt; 5; i++)</pre>
+        <label class="option"><input type="radio" name="q10" value="A"> A) 4</label>
+        <label class="option"><input type="radio" name="q10" value="B"> B) 6</label>
+        <label class="option"><input type="radio" name="q10" value="C"> C) 5</label>
+        <label class="option"><input type="radio" name="q10" value="D"> D) Infinite</label>
+      </div>
+
+      <div class="center">
+        <input type="submit" value="Submit Quiz" class="btn">
+      </div>
+    </form>
+  </section>
+
+  <footer>
+    <p>CodeQuiz - College Web Technology Project</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

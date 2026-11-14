@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CodeQuiz - Results</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <h1 class="logo">CodeQuiz</h1>
+    <div class="menu">
+      <a href="index.html">Home</a>
+      <a href="topics.html">Topics</a>
+    </div>
+  </header>
+
+  <section class="content quiz-box">
+    <h2 id="quizTitle">Quiz Submitted</h2>
+    <div class="card center">
+      <div id="candidateBadge" class="candidate-badge" style="display: none;">
+        <p><strong>Candidate:</strong> <span id="candidateName">—</span></p>
+        <p><strong>Roll Number:</strong> <span id="candidateRoll">—</span></p>
+      </div>
+      <p>Your answers have been submitted.</p>
+      <p class="score" id="scoreDisplay">—</p>
+      <p id="feedbackDisplay"></p>
+    </div>
+    <div class="center">
+      <a href="topics.html" class="btn">Try Another Quiz</a>
+      <a href="index.html" class="btn">Home</a>
+    </div>
+  </section>
+
+  <footer>
+    <p>CodeQuiz - College Web Technology Project</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

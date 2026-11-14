@@ -1,0 +1,187 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CodeQuiz - C Hard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <h1 class="logo">CodeQuiz</h1>
+  </header>
+
+  <section class="content quiz-box">
+    <h2>C - Hard Quiz</h2>
+    <p>15 questions | Time limit: 30 minutes | <span id="timer">30:00</span></p>
+    <p class="notice">You cannot leave this page until you submit the quiz.</p>
+
+        <form onsubmit="return submitQuiz()">
+      <div class="card student-card">
+        <h3>Student Information</h3>
+        <p class="instruction-text">Please enter your details before submitting the quiz.</p>
+        <div class="form-row">
+          <label for="studentName">Full Name:</label>
+          <input type="text" id="studentName" name="studentName" placeholder="e.g. Rahul Sharma">
+        </div>
+        <div class="form-row">
+          <label for="studentEmail">College Email:</label>
+          <input type="text" id="studentEmail" name="studentEmail" placeholder="e.g. rahul_cse@college.edu">
+        </div>
+        <div class="form-row">
+          <label for="studentRoll">Roll Number:</label>
+          <input type="text" id="studentRoll" name="studentRoll" placeholder="e.g. 20251CSE0332">
+        </div>
+      </div>
+      <div class="card question">
+        <h3>Q1. What is the output?</h3>
+        <pre>int x = 5;
+printf(&quot;%d&quot;, x++);</pre>
+        <label class="option"><input type="radio" name="q1" value="A"> A) 6</label>
+        <label class="option"><input type="radio" name="q1" value="B"> B) 5</label>
+        <label class="option"><input type="radio" name="q1" value="C"> C) 4</label>
+        <label class="option"><input type="radio" name="q1" value="D"> D) Error</label>
+      </div>
+      <div class="card question">
+        <h3>Q2. What is the output?</h3>
+        <pre>int x = 5;
+printf(&quot;%d&quot;, ++x);</pre>
+        <label class="option"><input type="radio" name="q2" value="A"> A) 5</label>
+        <label class="option"><input type="radio" name="q2" value="B"> B) 7</label>
+        <label class="option"><input type="radio" name="q2" value="C"> C) 6</label>
+        <label class="option"><input type="radio" name="q2" value="D"> D) Error</label>
+      </div>
+      <div class="card question">
+        <h3>Q3. What is the output?</h3>
+        <pre>printf(&quot;%d&quot;, 7 / 2);</pre>
+        <label class="option"><input type="radio" name="q3" value="A"> A) 3.5</label>
+        <label class="option"><input type="radio" name="q3" value="B"> B) 4</label>
+        <label class="option"><input type="radio" name="q3" value="C"> C) 3.0</label>
+        <label class="option"><input type="radio" name="q3" value="D"> D) 3</label>
+      </div>
+      <div class="card question">
+        <h3>Q4. What is the value of sizeof(char) in C?</h3>
+        <label class="option"><input type="radio" name="q4" value="A"> A) 1</label>
+        <label class="option"><input type="radio" name="q4" value="B"> B) 2</label>
+        <label class="option"><input type="radio" name="q4" value="C"> C) 4</label>
+        <label class="option"><input type="radio" name="q4" value="D"> D) 8</label>
+      </div>
+      <div class="card question">
+        <h3>Q5. What happens?</h3>
+        <pre>int a[3] = {1, 2, 3};
+printf(&quot;%d&quot;, a[3]);</pre>
+        <label class="option"><input type="radio" name="q5" value="A"> A) It prints 3</label>
+        <label class="option"><input type="radio" name="q5" value="B"> B) Undefined behaviour (out of bounds)</label>
+        <label class="option"><input type="radio" name="q5" value="C"> C) It prints 0</label>
+        <label class="option"><input type="radio" name="q5" value="D"> D) Compile error</label>
+      </div>
+      <div class="card question">
+        <h3>Q6. What is the output?</h3>
+        <pre>int a = 10, b = 3;
+printf(&quot;%d&quot;, a % b);</pre>
+        <label class="option"><input type="radio" name="q6" value="A"> A) 3</label>
+        <label class="option"><input type="radio" name="q6" value="B"> B) 0</label>
+        <label class="option"><input type="radio" name="q6" value="C"> C) 1</label>
+        <label class="option"><input type="radio" name="q6" value="D"> D) 3.33</label>
+      </div>
+      <div class="card question">
+        <h3>Q7. What is the output?</h3>
+        <pre>int x = 4;
+int *p = &amp;x;
+printf(&quot;%d&quot;, *p);</pre>
+        <label class="option"><input type="radio" name="q7" value="A"> A) The address of x</label>
+        <label class="option"><input type="radio" name="q7" value="B"> B) 0</label>
+        <label class="option"><input type="radio" name="q7" value="C"> C) Error</label>
+        <label class="option"><input type="radio" name="q7" value="D"> D) 4</label>
+      </div>
+      <div class="card question">
+        <h3>Q8. What is the output?</h3>
+        <pre>if (0)
+    printf(&quot;A&quot;);
+else
+    printf(&quot;B&quot;);</pre>
+        <label class="option"><input type="radio" name="q8" value="A"> A) B</label>
+        <label class="option"><input type="radio" name="q8" value="B"> B) A</label>
+        <label class="option"><input type="radio" name="q8" value="C"> C) AB</label>
+        <label class="option"><input type="radio" name="q8" value="D"> D) Nothing</label>
+      </div>
+      <div class="card question">
+        <h3>Q9. What is the output?</h3>
+        <pre>int i;
+for (i = 0; i &lt; 3; i++);
+printf(&quot;%d&quot;, i);</pre>
+        <label class="option"><input type="radio" name="q9" value="A"> A) 2</label>
+        <label class="option"><input type="radio" name="q9" value="B"> B) 3</label>
+        <label class="option"><input type="radio" name="q9" value="C"> C) 0</label>
+        <label class="option"><input type="radio" name="q9" value="D"> D) Error</label>
+      </div>
+      <div class="card question">
+        <h3>Q10. What is the output?</h3>
+        <pre>printf(&quot;%d&quot;, 5 == 5);</pre>
+        <label class="option"><input type="radio" name="q10" value="A"> A) 5</label>
+        <label class="option"><input type="radio" name="q10" value="B"> B) 0</label>
+        <label class="option"><input type="radio" name="q10" value="C"> C) 1</label>
+        <label class="option"><input type="radio" name="q10" value="D"> D) true</label>
+      </div>
+      <div class="card question">
+        <h3>Q11. What is the output?</h3>
+        <pre>char s[] = &quot;Hi&quot;;
+printf(&quot;%d&quot;, (int)sizeof(s));</pre>
+        <label class="option"><input type="radio" name="q11" value="A"> A) 2</label>
+        <label class="option"><input type="radio" name="q11" value="B"> B) 4</label>
+        <label class="option"><input type="radio" name="q11" value="C"> C) 1</label>
+        <label class="option"><input type="radio" name="q11" value="D"> D) 3</label>
+      </div>
+      <div class="card question">
+        <h3>Q12. What is the output?</h3>
+        <pre>int x = 3;
+x += 2 * 3;
+printf(&quot;%d&quot;, x);</pre>
+        <label class="option"><input type="radio" name="q12" value="A"> A) 9</label>
+        <label class="option"><input type="radio" name="q12" value="B"> B) 15</label>
+        <label class="option"><input type="radio" name="q12" value="C"> C) 11</label>
+        <label class="option"><input type="radio" name="q12" value="D"> D) 8</label>
+      </div>
+      <div class="card question">
+        <h3>Q13. What is the output?</h3>
+        <pre>int a = 5;
+printf(&quot;%d&quot;, a &gt; 3 &amp;&amp; a &lt; 10);</pre>
+        <label class="option"><input type="radio" name="q13" value="A"> A) 0</label>
+        <label class="option"><input type="radio" name="q13" value="B"> B) 1</label>
+        <label class="option"><input type="radio" name="q13" value="C"> C) 5</label>
+        <label class="option"><input type="radio" name="q13" value="D"> D) Error</label>
+      </div>
+      <div class="card question">
+        <h3>Q14. What is the output?</h3>
+        <pre>switch (2) {
+  case 1: printf(&quot;A&quot;);
+  case 2: printf(&quot;B&quot;);
+  case 3: printf(&quot;C&quot;);
+}</pre>
+        <label class="option"><input type="radio" name="q14" value="A"> A) B</label>
+        <label class="option"><input type="radio" name="q14" value="B"> B) ABC</label>
+        <label class="option"><input type="radio" name="q14" value="C"> C) BC</label>
+        <label class="option"><input type="radio" name="q14" value="D"> D) C</label>
+      </div>
+      <div class="card question">
+        <h3>Q15. What does strcmp(&quot;a&quot;, &quot;a&quot;) return?</h3>
+        <label class="option"><input type="radio" name="q15" value="A"> A) 1</label>
+        <label class="option"><input type="radio" name="q15" value="B"> B) -1</label>
+        <label class="option"><input type="radio" name="q15" value="C"> C) true</label>
+        <label class="option"><input type="radio" name="q15" value="D"> D) 0</label>
+      </div>
+
+      <div class="center">
+        <input type="submit" value="Submit Quiz" class="btn">
+      </div>
+    </form>
+  </section>
+
+  <footer>
+    <p>CodeQuiz - College Web Technology Project</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

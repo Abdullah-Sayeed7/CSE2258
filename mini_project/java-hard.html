@@ -1,0 +1,175 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CodeQuiz - Java Hard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <h1 class="logo">CodeQuiz</h1>
+  </header>
+
+  <section class="content quiz-box">
+    <h2>Java - Hard Quiz</h2>
+    <p>15 questions | Time limit: 30 minutes | <span id="timer">30:00</span></p>
+    <p class="notice">You cannot leave this page until you submit the quiz.</p>
+
+        <form onsubmit="return submitQuiz()">
+      <div class="card student-card">
+        <h3>Student Information</h3>
+        <p class="instruction-text">Please enter your details before submitting the quiz.</p>
+        <div class="form-row">
+          <label for="studentName">Full Name:</label>
+          <input type="text" id="studentName" name="studentName" placeholder="e.g. Rahul Sharma">
+        </div>
+        <div class="form-row">
+          <label for="studentEmail">College Email:</label>
+          <input type="text" id="studentEmail" name="studentEmail" placeholder="e.g. rahul_cse@college.edu">
+        </div>
+        <div class="form-row">
+          <label for="studentRoll">Roll Number:</label>
+          <input type="text" id="studentRoll" name="studentRoll" placeholder="e.g. 20251CSE0332">
+        </div>
+      </div>
+      <div class="card question">
+        <h3>Q1. What is the output?</h3>
+        <pre>System.out.println(&quot;5&quot; + 3);</pre>
+        <label class="option"><input type="radio" name="q1" value="A"> A) 8</label>
+        <label class="option"><input type="radio" name="q1" value="B"> B) 53</label>
+        <label class="option"><input type="radio" name="q1" value="C"> C) 5 3</label>
+        <label class="option"><input type="radio" name="q1" value="D"> D) Error</label>
+      </div>
+      <div class="card question">
+        <h3>Q2. What is the output?</h3>
+        <pre>System.out.println(5 + 3 + &quot;A&quot;);</pre>
+        <label class="option"><input type="radio" name="q2" value="A"> A) 53A</label>
+        <label class="option"><input type="radio" name="q2" value="B"> B) A8</label>
+        <label class="option"><input type="radio" name="q2" value="C"> C) 8A</label>
+        <label class="option"><input type="radio" name="q2" value="D"> D) Error</label>
+      </div>
+      <div class="card question">
+        <h3>Q3. What is the output?</h3>
+        <pre>System.out.println(10 / 4);</pre>
+        <label class="option"><input type="radio" name="q3" value="A"> A) 2.5</label>
+        <label class="option"><input type="radio" name="q3" value="B"> B) 3</label>
+        <label class="option"><input type="radio" name="q3" value="C"> C) 2.0</label>
+        <label class="option"><input type="radio" name="q3" value="D"> D) 2</label>
+      </div>
+      <div class="card question">
+        <h3>Q4. What is the output?</h3>
+        <pre>int x = 5;
+System.out.println(x++ + ++x);</pre>
+        <label class="option"><input type="radio" name="q4" value="A"> A) 12</label>
+        <label class="option"><input type="radio" name="q4" value="B"> B) 10</label>
+        <label class="option"><input type="radio" name="q4" value="C"> C) 11</label>
+        <label class="option"><input type="radio" name="q4" value="D"> D) 13</label>
+      </div>
+      <div class="card question">
+        <h3>Q5. What is the output?</h3>
+        <pre>String a = new String(&quot;hi&quot;);
+String b = new String(&quot;hi&quot;);
+System.out.println(a == b);</pre>
+        <label class="option"><input type="radio" name="q5" value="A"> A) true</label>
+        <label class="option"><input type="radio" name="q5" value="B"> B) false</label>
+        <label class="option"><input type="radio" name="q5" value="C"> C) hi</label>
+        <label class="option"><input type="radio" name="q5" value="D"> D) Error</label>
+      </div>
+      <div class="card question">
+        <h3>Q6. Which keyword prevents a class from being inherited?</h3>
+        <label class="option"><input type="radio" name="q6" value="A"> A) static</label>
+        <label class="option"><input type="radio" name="q6" value="B"> B) private</label>
+        <label class="option"><input type="radio" name="q6" value="C"> C) final</label>
+        <label class="option"><input type="radio" name="q6" value="D"> D) const</label>
+      </div>
+      <div class="card question">
+        <h3>Q7. What is the output?</h3>
+        <pre>char c = &#x27;A&#x27;;
+c++;
+System.out.println(c);</pre>
+        <label class="option"><input type="radio" name="q7" value="A"> A) A</label>
+        <label class="option"><input type="radio" name="q7" value="B"> B) 66</label>
+        <label class="option"><input type="radio" name="q7" value="C"> C) Error</label>
+        <label class="option"><input type="radio" name="q7" value="D"> D) B</label>
+      </div>
+      <div class="card question">
+        <h3>Q8. What is the output?</h3>
+        <pre>int[] a = new int[3];
+System.out.println(a[0]);</pre>
+        <label class="option"><input type="radio" name="q8" value="A"> A) 0</label>
+        <label class="option"><input type="radio" name="q8" value="B"> B) null</label>
+        <label class="option"><input type="radio" name="q8" value="C"> C) 1</label>
+        <label class="option"><input type="radio" name="q8" value="D"> D) Error</label>
+      </div>
+      <div class="card question">
+        <h3>Q9. What is the output?</h3>
+        <pre>System.out.println(1 + 2 + &quot;3&quot; + 4 + 5);</pre>
+        <label class="option"><input type="radio" name="q9" value="A"> A) 12345</label>
+        <label class="option"><input type="radio" name="q9" value="B"> B) 3345</label>
+        <label class="option"><input type="radio" name="q9" value="C"> C) 339</label>
+        <label class="option"><input type="radio" name="q9" value="D"> D) 15</label>
+      </div>
+      <div class="card question">
+        <h3>Q10. Which of these is NOT a primitive data type?</h3>
+        <label class="option"><input type="radio" name="q10" value="A"> A) int</label>
+        <label class="option"><input type="radio" name="q10" value="B"> B) boolean</label>
+        <label class="option"><input type="radio" name="q10" value="C"> C) String</label>
+        <label class="option"><input type="radio" name="q10" value="D"> D) char</label>
+      </div>
+      <div class="card question">
+        <h3>Q11. What is the output?</h3>
+        <pre>System.out.println((double) 7 / 2);</pre>
+        <label class="option"><input type="radio" name="q11" value="A"> A) 3</label>
+        <label class="option"><input type="radio" name="q11" value="B"> B) 4.0</label>
+        <label class="option"><input type="radio" name="q11" value="C"> C) 3.0</label>
+        <label class="option"><input type="radio" name="q11" value="D"> D) 3.5</label>
+      </div>
+      <div class="card question">
+        <h3>Q12. What does static mean in: static int count;</h3>
+        <label class="option"><input type="radio" name="q12" value="A"> A) One copy shared by all objects</label>
+        <label class="option"><input type="radio" name="q12" value="B"> B) The value cannot change</label>
+        <label class="option"><input type="radio" name="q12" value="C"> C) It is private</label>
+        <label class="option"><input type="radio" name="q12" value="D"> D) It is a local variable</label>
+      </div>
+      <div class="card question">
+        <h3>Q13. What is the output?</h3>
+        <pre>int x = 10;
+if (x &gt; 5 &amp;&amp; x &lt; 8)
+    System.out.println(&quot;A&quot;);
+else
+    System.out.println(&quot;B&quot;);</pre>
+        <label class="option"><input type="radio" name="q13" value="A"> A) A</label>
+        <label class="option"><input type="radio" name="q13" value="B"> B) B</label>
+        <label class="option"><input type="radio" name="q13" value="C"> C) AB</label>
+        <label class="option"><input type="radio" name="q13" value="D"> D) Nothing</label>
+      </div>
+      <div class="card question">
+        <h3>Q14. Which exception occurs when an integer is divided by zero?</h3>
+        <label class="option"><input type="radio" name="q14" value="A"> A) NullPointerException</label>
+        <label class="option"><input type="radio" name="q14" value="B"> B) IOException</label>
+        <label class="option"><input type="radio" name="q14" value="C"> C) ArithmeticException</label>
+        <label class="option"><input type="radio" name="q14" value="D"> D) NumberFormatException</label>
+      </div>
+      <div class="card question">
+        <h3>Q15. What does the equals() method of String compare?</h3>
+        <label class="option"><input type="radio" name="q15" value="A"> A) The memory address</label>
+        <label class="option"><input type="radio" name="q15" value="B"> B) The length only</label>
+        <label class="option"><input type="radio" name="q15" value="C"> C) The first letter</label>
+        <label class="option"><input type="radio" name="q15" value="D"> D) The text content</label>
+      </div>
+
+      <div class="center">
+        <input type="submit" value="Submit Quiz" class="btn">
+      </div>
+    </form>
+  </section>
+
+  <footer>
+    <p>CodeQuiz - College Web Technology Project</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
