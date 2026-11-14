@@ -14,4 +14,3 @@ A simple quiz website built for our Web Technology course. It lets students test
 - **Question Validation**: Highlights unanswered questions in red and blocks empty submissions.
 - **Instant Results**: Calculates final score, displays percentage feedback, and generates a personalized scorecard.
 - **Accidental Exit Warning**: Prompts a confirmation if you try to leave or refresh mid-quiz.
--
