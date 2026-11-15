@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Amazon - Online Shopping</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo">Amazon</div>
+
+        <div class="location">
+            Deliver to India
+        </div>
+
+        <div class="search">
+            <input type="text" id="searchBox"
+                   placeholder="Search products">
+            <button onclick="searchProduct()">Search</button>
+        </div>
+
+        <div class="account">
+            Hello, Sign in
+        </div>
+
+        <div class="cart">
+            Cart (0)
+        </div>
+    </header>
+
+    <nav>
+        <a href="#">All</a>
+        <a href="#">Today's Deals</a>
+        <a href="#">Mobiles</a>
+        <a href="#">Electronics</a>
+        <a href="#">Fashion</a>
+        <a href="#">Customer Service</a>
+    </nav>
+
+    <section class="banner">
+        <h1>Welcome to Amazon</h1>
+        <p>Everything you need, all in one place.</p>
+        <button onclick="showOffer()">Explore Offers</button>
+    </section>
+
+    <main>
+
+        <h2>Shop by Category</h2>
+
+        <div class="products">
+
+            <div class="card">
+                <div class="product-image"><img src="elect.png" alt="Electronics" height="130px"></div>
+                <h3>Electronics</h3>
+                <p>Explore gadgets and devices.</p>
+                <a href="#">Shop Now</a>
+            </div>
+
+            <div class="card">
+                <div class="product-image"><img src="fashion.png" alt="Fashion" height="130px"></div>
+                <h3>Fashion</h3>
+                <p>Discover the latest trends.</p>
+                <a href="#">Shop Now</a>
+            </div>
+
+            <div class="card">
+                <div class="product-image"><img src="home.png" alt="Home Essentials" height="130px"></div>
+                <h3>Home Essentials</h3>
+                <p>Make your home beautiful.</p>
+                <a href="#">Shop Now</a>
+            </div>
+
+            <div class="card">
+                <div class="product-image"><img src="books.png" alt="Books" height="130px"></div>
+                <h3>Books</h3>
+                <p>Find your next favourite book.</p>
+                <a href="#">Shop Now</a>
+            </div>
+
+        </div>
+
+        <section class="offer">
+            <h2>Special Deals for You</h2>
+            <p>Get exciting discounts on selected products!</p>
+            <button onclick="showOffer()">View Offers</button>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>2026 Amazon. All Rights Reserved.</p>
+        <p>About Us | Contact | Privacy Policy</p>
+    </footer>
+
+    <script>
+        function searchProduct() {
+            let product = document.getElementById("searchBox").value;
+
+            if (product == "") {
+                alert("Please enter a product name.");
+            }
+            else {
+                alert("Searching for: " + product);
+            }
+        }
+
+        function showOffer() {
+            let name = prompt("Enter your name to see special offers:");
+
+            if (name != null && name != "") {
+                alert("Welcome " + name + "! Enjoy shopping with us.");
+            }
+        }
+    </script>
+
+</body>
+</html>
